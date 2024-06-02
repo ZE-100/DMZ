@@ -21,6 +21,7 @@
         <module>dmz</module>
         <module>dmz-api</module>
         <module>dmz-app</module>
+        <module>dmz-auth</module>
         <module>dmz-rs-api</module>
         <module>dmz-rs-server</module>
     </modules>
@@ -50,6 +51,12 @@
             <dependency>
                 <groupId>ch.zindustries.dmz</groupId>
                 <artifactId>dmz-app</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.zindustries.dmz</groupId>
+                <artifactId>dmz-auth</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
 
