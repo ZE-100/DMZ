@@ -10,7 +10,7 @@ services:
       - DB_ENABLE_SSL=false
     volumes:
       - dmz_pgsql_vol:/data/postgres
-    ports:y
+    ports:
       - "5432:5432"
     networks:
       - dmz_metadata_net
