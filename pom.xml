@@ -18,7 +18,11 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>dmz</module>
+        <module>dmz-api</module>
         <module>dmz-app</module>
+        <module>dmz-rs-api</module>
+        <module>dmz-rs-server</module>
     </modules>
 
     <properties>
