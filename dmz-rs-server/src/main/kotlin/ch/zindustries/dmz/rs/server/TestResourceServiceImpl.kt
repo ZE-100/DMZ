@@ -10,5 +10,7 @@ class TestResourceServiceImpl(
     private val testService: TestService
 ) : TestResourceService {
 
-    override fun test(): ResponseEntity<String> = ResponseEntity.ok(testService.test())
+    override fun testAdmin(): ResponseEntity<String> = ResponseEntity.ok(testService.test())
+
+    override fun testUser(): ResponseEntity<String> = ResponseEntity.ok(testService.test())
 }
