@@ -20,6 +20,11 @@
             <artifactId>dmz</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>ch.zindustries.dmz</groupId>
+            <artifactId>dmz-rs-api</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
