@@ -37,7 +37,31 @@
             <!-- Module dependencies-->
             <dependency>
                 <groupId>ch.zindustries.dmz</groupId>
+                <artifactId>dmz</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.zindustries.dmz</groupId>
+                <artifactId>dmz-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.zindustries.dmz</groupId>
                 <artifactId>dmz-app</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.zindustries.dmz</groupId>
+                <artifactId>dmz-rs-api</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.zindustries.dmz</groupId>
+                <artifactId>dmz-rs-server</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
 

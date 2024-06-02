@@ -12,6 +12,16 @@
 
     <artifactId>dmz-rs-api</artifactId>
 
+    <dependencies>
+
+        <!-- Modules -->
+        <dependency>
+            <groupId>ch.zindustries.dmz</groupId>
+            <artifactId>dmz-api</artifactId>
+        </dependency>
+
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

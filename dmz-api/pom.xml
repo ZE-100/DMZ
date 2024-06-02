@@ -12,6 +12,16 @@
 
     <artifactId>dmz-api</artifactId>
 
+    <dependencies>
+
+        <!-- Kotlin -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+        </dependency>
+
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

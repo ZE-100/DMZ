@@ -14,6 +14,12 @@
 
     <dependencies>
 
+        <!-- Modules -->
+        <dependency>
+            <groupId>ch.zindustries.dmz</groupId>
+            <artifactId>dmz-rs-server</artifactId>
+        </dependency>
+
         <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -23,12 +29,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-
-        <!-- Kotlin -->
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib</artifactId>
         </dependency>
 
     </dependencies>

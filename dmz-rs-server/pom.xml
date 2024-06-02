@@ -12,6 +12,16 @@
 
     <artifactId>dmz-rs-server</artifactId>
 
+    <dependencies>
+
+        <!-- Modules -->
+        <dependency>
+            <groupId>ch.zindustries.dmz</groupId>
+            <artifactId>dmz</artifactId>
+        </dependency>
+
+    </dependencies>
+
     <build>
         <testSourceDirectory>src/test/kotlin</testSourceDirectory>
 
