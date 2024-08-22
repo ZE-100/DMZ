@@ -6,14 +6,14 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 
-@RequestMapping
+@RequestMapping("test")
 interface TestResourceService {
 
     @AccessibleByAdmin
     @GetMapping("test-admin")
-    fun testAdmin() : ResponseEntity<String>
+    fun testAdmin(): ResponseEntity<String>
 
     @AccessibleByUser
     @GetMapping("test-user")
-    fun testUser() : ResponseEntity<String>
+    fun testUser(): ResponseEntity<String>
 }
