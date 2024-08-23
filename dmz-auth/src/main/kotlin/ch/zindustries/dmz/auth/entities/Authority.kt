@@ -6,8 +6,8 @@ import jakarta.persistence.ManyToMany
 import jakarta.persistence.Table
 
 @Entity
-@Table(name = "right")
-class Right : BaseEntity() {
+@Table(name = "authority")
+class Authority : BaseEntity() {
 
     @Column(length = 255)
     var name: String = ""
@@ -15,6 +15,6 @@ class Right : BaseEntity() {
     @Column(length = 255)
     var code: String = ""
 
-    @ManyToMany(mappedBy = "rights")
-    var users: Set<User> = HashSet()
+    @ManyToMany(mappedBy = "authorities")
+    var accounts: Set<Account> = HashSet()
 }

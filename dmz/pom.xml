@@ -25,6 +25,12 @@
             <artifactId>dmz-auth</artifactId>
         </dependency>
 
+        <!-- Kotlin -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

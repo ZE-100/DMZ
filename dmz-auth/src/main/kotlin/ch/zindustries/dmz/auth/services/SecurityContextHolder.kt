@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 class SecurityContextHolder {
 
     fun getUser(): UserDTO {
-        return SecurityContextHolder.getContext()?.authentication?.principal as UserDTO
+        return SecurityContextHolder.getContext()?.authentication?.principal as UserDTO?
             ?: throw SecurityContextException("No security context found.")
     }
 }

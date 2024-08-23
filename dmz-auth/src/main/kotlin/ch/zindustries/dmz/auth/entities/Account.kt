@@ -3,8 +3,8 @@ package ch.zindustries.dmz.auth.entities
 import jakarta.persistence.*
 
 @Entity
-@Table(name = "user")
-class User : BaseEntity() {
+@Table(name = "account")
+class Account : BaseEntity() {
 
     @Column(length = 255, nullable = false)
     var username: String = ""
@@ -23,11 +23,11 @@ class User : BaseEntity() {
 
     @ManyToMany
     @JoinTable(
-        name = "right_user",
-        joinColumns = [JoinColumn(name = "right_id")],
-        inverseJoinColumns = [JoinColumn(name = "user_id")],
+        name = "authority_account",
+        joinColumns = [JoinColumn(name = "authority_id")],
+        inverseJoinColumns = [JoinColumn(name = "account_id")],
     )
-    var rights: Set<Right> = HashSet()
+    var authorities: Set<Authority> = HashSet()
 
     @ElementCollection
     var roles: Set<String> = HashSet()
