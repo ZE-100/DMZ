@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class TestResourceServiceImpl(
+open class TestResourceServiceImpl(
     private val testService: TestService
 ) : TestResourceService {
 

@@ -27,12 +27,12 @@ open class SecurityConfig {
     open fun filterChain(
         httpSecurity: HttpSecurity,
         userDetailsService: UserDetailsService,
-        jwtAuthenticationFilter: AuthenticationFilter,
+        authenticationFilter: AuthenticationFilter,
+        authorizationFilter: AuthorizationFilter
     ): SecurityFilterChain {
 
-        jwtAuthenticationFilter.setFilterProcessesUrl("/auth/login")
-
-        val authorizationFilter = AuthorizationFilter(userDetailsService)
+        // Custom login url
+        authenticationFilter.setFilterProcessesUrl("/auth/login")
 
         httpSecurity
             .csrf { it.disable() }
@@ -42,7 +42,7 @@ open class SecurityConfig {
                 it.requestMatchers(*AUTH_WHITELIST).permitAll()
                     .anyRequest().authenticated()
             }
-            .addFilterBefore(jwtAuthenticationFilter, BasicAuthenticationFilter::class.java)
+            .addFilterBefore(authenticationFilter, BasicAuthenticationFilter::class.java)
             .addFilterAfter(authorizationFilter, AuthenticationFilter::class.java)
 
         return httpSecurity.build()
