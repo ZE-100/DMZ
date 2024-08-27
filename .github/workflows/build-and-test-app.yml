@@ -1,0 +1,31 @@
+name: Build and test project
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up JDK 17 with cached dependencies
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Start pgsql Docker image
+      run: docker compose -f ./docker/pgsql-compose.yml up dmz_pgsql -d
+
+    - name: Build with Maven
+      run: mvn install -DskipTests
+
+    - name: Test with Maven
+      run: mvn surefire:test failsafe:integration-test
