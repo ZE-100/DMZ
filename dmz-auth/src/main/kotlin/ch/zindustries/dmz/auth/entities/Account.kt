@@ -1,6 +1,6 @@
 package ch.zindustries.dmz.auth.entities
 
-import ch.zindustries.dmz.auth.entities.sas.AccountEntityListener
+import ch.zindustries.dmz.auth.entities.listeners.AccountEntityListener
 import jakarta.persistence.*
 
 @Entity

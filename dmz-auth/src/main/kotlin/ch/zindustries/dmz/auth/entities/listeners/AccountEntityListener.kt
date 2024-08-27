@@ -1,4 +1,4 @@
-package ch.zindustries.dmz.auth.entities.sas
+package ch.zindustries.dmz.auth.entities.listeners
 
 import ch.zindustries.dmz.auth.entities.Account
 import jakarta.persistence.PrePersist
