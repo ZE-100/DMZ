@@ -6,21 +6,15 @@ import ch.zindustries.dmz.auth.dtos.AuthorityDTO
 import ch.zindustries.dmz.auth.entities.Account
 import ch.zindustries.dmz.auth.entities.Authority
 import ch.zindustries.dmz.auth.repositories.AccountRepository
-import ch.zindustries.dmz.auth.services.AccessControlService
-import ch.zindustries.dmz.auth.types.TestServices
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service
 open class TestServiceImpl(
-    private val accessControl: AccessControlService,
     private val accountRepository: AccountRepository,
 ) : TestService {
 
     override fun test(): String {
-
-        accessControl.assertCanAccessService(TestServices.TEST_SERVICE)
-
         return "Test"
     }
 

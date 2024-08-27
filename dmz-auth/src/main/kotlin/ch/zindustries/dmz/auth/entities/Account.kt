@@ -33,6 +33,6 @@ class Account : BaseEntity() {
     )
     var authorities: Set<Authority> = HashSet()
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     var roles: Set<String> = HashSet()
 }

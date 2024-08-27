@@ -2,7 +2,6 @@ package ch.zindustries.dmz.rs.api
 
 import ch.zindustries.dmz.auth.annotations.AccessibleByAdmin
 import ch.zindustries.dmz.auth.annotations.AccessibleByAnonymous
-import ch.zindustries.dmz.auth.annotations.AccessibleByUser
 import ch.zindustries.dmz.auth.dtos.AccountDTO
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
@@ -16,7 +15,7 @@ interface TestResourceService {
     @GetMapping("test-admin")
     fun testAdmin(): ResponseEntity<String>
 
-    @AccessibleByUser
+    @AccessibleByAnonymous
     @GetMapping("test-user")
     fun testUser(): ResponseEntity<String>
 
