@@ -7,9 +7,9 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
     ports:
-      - 27017:27017
+      - "27017:27017"
     volumes:
       - dmz_mongodb_vol:/data/mongodb
 
 volumes:
-  dmz_mongodb_vol
+  dmz_mongodb_vol:

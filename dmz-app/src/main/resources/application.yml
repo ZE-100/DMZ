@@ -1,0 +1,15 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: dmz
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dmz-pgsql
+    username: postgres
+    password: postgres
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update

@@ -1,5 +1,6 @@
 services:
 
+  # You might have to manually kill your pgsql service in task manager
   dmz_pgsql:
     container_name: dkr_postgres
     image: bitnami/postgresql:16.2.0
@@ -9,7 +10,7 @@ services:
       - POSTGRES_DB=dmz-pgsql
       - DB_ENABLE_SSL=false
     volumes:
-      - dmz_pgsql_vol:/data/postgres
+      - dmz_pgsql_vol:/var/lib/data/postgres
     ports:
       - "5432:5432"
     networks:
