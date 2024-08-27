@@ -22,7 +22,7 @@ jobs:
         cache: maven
 
     - name: Start pgsql Docker image
-      run: docker compose -f ./docker/pgsql-compose.yml start dmz_pgsql
+      run: docker compose -f ./docker/pgsql-compose.yml up dmz_pgsql -d
 
     - name: Build with Maven
       run: mvn install -DskipTests
