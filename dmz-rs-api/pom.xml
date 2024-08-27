@@ -20,10 +20,21 @@
             <artifactId>dmz-api</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>ch.zindustries.dmz</groupId>
+            <artifactId>dmz-auth</artifactId>
+        </dependency>
+
         <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Kotlin -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
         </dependency>
 
     </dependencies>

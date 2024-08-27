@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="DmzAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <option name="ACTIVE_PROFILES" value="dev" />
+    <module name="dmz-app" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="ch.zindustries.dmz.app.DmzAppApplication" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="ch.zindustries.dmz.app.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
