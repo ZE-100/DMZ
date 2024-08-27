@@ -4,5 +4,6 @@ class Roles {
     companion object {
         const val ADMIN = "admin"
         const val USER = "user"
+        const val ANONYMOUS = "anonymous"
     }
 }

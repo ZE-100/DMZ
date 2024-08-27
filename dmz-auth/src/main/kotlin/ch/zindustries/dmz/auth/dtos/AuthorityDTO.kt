@@ -1,6 +1,6 @@
 package ch.zindustries.dmz.auth.dtos
 
-data class RightDTO(
+data class AuthorityDTO(
     var name: String,
     var code: String,
 )

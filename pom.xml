@@ -72,6 +72,14 @@
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
 
+            <!-- Additional necessary libraries-->
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>6.1.0</version>
+                <scope>provided</scope>
+            </dependency>
+
             <!-- Necessary Kotlin Dependencies -->
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
