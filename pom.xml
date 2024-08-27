@@ -28,7 +28,7 @@
 
     <properties>
         <!-- Dependency versions -->
-        <jjwt-api.version>0.12.6</jjwt-api.version>
+        <java-jwt.version>4.4.0</java-jwt.version>
         <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
         <!-- Project versions -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -85,9 +85,9 @@
             </dependency>
 
             <dependency>
-                <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt-api</artifactId>
-                <version>${jjwt-api.version}</version>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${java-jwt.version}</version>
             </dependency>
 
             <!-- Necessary Kotlin Dependencies -->

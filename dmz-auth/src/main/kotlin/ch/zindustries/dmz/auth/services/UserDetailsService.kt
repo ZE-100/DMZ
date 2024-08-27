@@ -1,9 +1,10 @@
 package ch.zindustries.dmz.auth.services
 
+import ch.zindustries.dmz.auth.dtos.AccountDTO
+import ch.zindustries.dmz.auth.dtos.AuthorityDTO
+import ch.zindustries.dmz.auth.dtos.DMZUserDetails
 import ch.zindustries.dmz.auth.exceptions.SecurityContextException
 import ch.zindustries.dmz.auth.repositories.AccountRepository
-import org.springframework.security.core.authority.SimpleGrantedAuthority
-import org.springframework.security.core.userdetails.User
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
@@ -24,10 +25,20 @@ open class UserDetailsService(
         val account = accountRepository.findByUsername(username)
             ?: throw SecurityContextException("No user with username '$username' found.")
 
-        return User(
-            account.username,
-            account.password,
-            account.authorities.map { SimpleGrantedAuthority(it.name) }
+        // TODO: Replace by mapstruct
+        return DMZUserDetails(
+            AccountDTO(
+                account.id!!,
+                account.username,
+                account.email,
+                account.phone,
+                account.multiFactorActivated,
+                account.authorities.map { AuthorityDTO(it.name, it.code) }.toSet(),
+                account.roles,
+                account.createdAt,
+                account.updatedAt,
+            ),
+            account.password
         )
     }
 }
