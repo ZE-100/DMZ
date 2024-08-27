@@ -23,9 +23,7 @@ class Account : BaseEntity() {
     @Column
     var multiFactorActivated: Boolean = false
 
-    @ManyToMany(
-        cascade = [CascadeType.ALL],
-    )
+    @ManyToMany(cascade = [CascadeType.ALL])
     @JoinTable(
         name = "authority_account",
         joinColumns = [JoinColumn(name = "authority_id")],

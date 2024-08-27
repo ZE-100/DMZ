@@ -16,7 +16,7 @@ class AccountEntityListener {
     private lateinit var passwordEncoder: PasswordEncoder
 
     @PrePersist
-    @PreUpdate
+    @PreUpdate // TODO: Might has to be removed
     fun hashPassword(account: Account) {
         account.password = passwordEncoder.encode(account.password)
     }

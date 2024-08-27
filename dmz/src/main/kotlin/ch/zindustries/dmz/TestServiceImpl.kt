@@ -21,6 +21,8 @@ open class TestServiceImpl(
     @Transactional
     override fun createTestUsers(): List<AccountDTO> {
 
+        // TODO: Cleanup this mess some day
+
         val admin = Account()
         admin.username = "admin"
         admin.password = "admin"
@@ -31,7 +33,7 @@ open class TestServiceImpl(
         testAuthority.name = "test"
         testAuthority.code = "1"
         admin.authorities = setOf(testAuthority)
-        admin.roles  = setOf("ROLE_ADMIN", "ROLE_USER")
+        admin.roles = setOf("ROLE_ADMIN", "ROLE_USER")
 
         val user = Account()
         user.username = "user"
@@ -43,7 +45,7 @@ open class TestServiceImpl(
         testAuthority1.name = "test1"
         testAuthority1.code = "2"
         user.authorities = setOf(testAuthority1)
-        user.roles  = setOf("ROLE_USER")
+        user.roles = setOf("ROLE_USER")
 
         val saveAll = accountRepository.saveAll(listOf(admin, user))
 
