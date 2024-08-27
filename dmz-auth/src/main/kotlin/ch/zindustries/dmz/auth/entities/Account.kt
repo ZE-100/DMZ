@@ -1,9 +1,11 @@
 package ch.zindustries.dmz.auth.entities
 
+import ch.zindustries.dmz.auth.entities.sas.AccountEntityListener
 import jakarta.persistence.*
 
 @Entity
 @Table(name = "account")
+@EntityListeners(AccountEntityListener::class)
 class Account : BaseEntity() {
 
     @Column(length = 255, nullable = false)
@@ -21,7 +23,9 @@ class Account : BaseEntity() {
     @Column
     var multiFactorActivated: Boolean = false
 
-    @ManyToMany
+    @ManyToMany(
+        cascade = [CascadeType.ALL],
+    )
     @JoinTable(
         name = "authority_account",
         joinColumns = [JoinColumn(name = "authority_id")],

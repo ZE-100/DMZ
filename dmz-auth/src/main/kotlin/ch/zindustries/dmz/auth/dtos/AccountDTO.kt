@@ -7,7 +7,7 @@ data class AccountDTO(
     var id: Long,
     var username: String,
     var email: String,
-    var phone: String,
+    var phone: String?,
     var multiFactorActivated: Boolean,
     var authorities: Set<AuthorityDTO>,
     var roles: Set<String>,

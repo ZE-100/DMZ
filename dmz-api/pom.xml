@@ -14,6 +14,12 @@
 
     <dependencies>
 
+        <!-- Modules -->
+        <dependency>
+            <groupId>ch.zindustries.dmz</groupId>
+            <artifactId>dmz-auth</artifactId>
+        </dependency>
+
         <!-- Kotlin -->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
