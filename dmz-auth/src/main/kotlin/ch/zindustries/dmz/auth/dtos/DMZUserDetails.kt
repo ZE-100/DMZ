@@ -4,7 +4,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.User
 
 class DMZUserDetails(
-    account: AccountDTO,
+    var account: AccountDTO,
     password: String?,
     enabled: Boolean = true,
     accountNonExpired: Boolean = true,

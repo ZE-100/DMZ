@@ -16,21 +16,20 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 
 @Configuration
 @EnableWebSecurity
-open class SecurityConfig(
-    private val authConfig: AuthenticationConfiguration,
-    private val userDetailsService: UserDetailsService
-) {
+open class SecurityConfig {
 
-    @SuppressWarnings("PrivatePropertyUnderscore")
     private val AUTH_WHITELIST = arrayOf(
         "/anonymous/**",
         "/test/**"
     )
 
     @Bean
-    open fun filterChain(httpSecurity: HttpSecurity): SecurityFilterChain {
+    open fun filterChain(
+        httpSecurity: HttpSecurity,
+        userDetailsService: UserDetailsService,
+        jwtAuthenticationFilter: AuthenticationFilter,
+    ): SecurityFilterChain {
 
-        val jwtAuthenticationFilter = AuthenticationFilter(authenticationManager())
         jwtAuthenticationFilter.setFilterProcessesUrl("/auth/login")
 
         val authorizationFilter = AuthorizationFilter(userDetailsService)
@@ -50,7 +49,9 @@ open class SecurityConfig(
     }
 
     @Bean
-    open fun authenticationManager(): AuthenticationManager = authConfig.authenticationManager
+    open fun authenticationManager(
+        authConfig: AuthenticationConfiguration
+    ): AuthenticationManager = authConfig.authenticationManager
 
     @Bean
     open fun passwordEncoder(): PasswordEncoder = BCryptPasswordEncoder()
