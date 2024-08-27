@@ -27,6 +27,10 @@
     </modules>
 
     <properties>
+        <!-- Dependency versions -->
+        <jjwt-api.version>0.12.6</jjwt-api.version>
+        <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
+        <!-- Project versions -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.code.style>official</kotlin.code.style>
         <kotlin.compiler.jvmTarget>1.17</kotlin.compiler.jvmTarget>
@@ -39,45 +43,51 @@
             <dependency>
                 <groupId>ch.zindustries.dmz</groupId>
                 <artifactId>dmz</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>ch.zindustries.dmz</groupId>
                 <artifactId>dmz-api</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>ch.zindustries.dmz</groupId>
                 <artifactId>dmz-app</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>ch.zindustries.dmz</groupId>
                 <artifactId>dmz-auth</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>ch.zindustries.dmz</groupId>
                 <artifactId>dmz-rs-api</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>ch.zindustries.dmz</groupId>
                 <artifactId>dmz-rs-server</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>${project.version}</version>
             </dependency>
 
             <!-- Additional necessary libraries-->
             <dependency>
                 <groupId>jakarta.servlet</groupId>
                 <artifactId>jakarta.servlet-api</artifactId>
-                <version>6.1.0</version>
+                <version>${jakarta.servlet-api.version}</version>
                 <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jjwt-api.version}</version>
             </dependency>
 
             <!-- Necessary Kotlin Dependencies -->
